@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>AutoShop</title>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="Spotify AutoShop">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"
+    integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+  </script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+    integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+</head>
+<script type="text/javascript" src="/script.js"></script>
+
+<body style="background-color: #23272A; color: white;">
+  <div class="container">
+    <div style="margin: 0 auto; padding-top: 2%;" class="container row d-flex justify-content-center text-center">
+      <img style="padding-bottom: 5%; width: 50%;" src="/logo" alt="logo" />
+      <div class="alert alert-danger" role="alert">
+        We currently accept Bitcoin, Bitcoin Cash, Monero and Litecoin. Need crypto? Get it from <a
+          href="https://www.paypal.com/us/webapps/mpp/crypto" target="_blank" rel="noopener">PayPal</a> or <a
+          href="https://coinbase.com" target="_blank" rel="noopener">Coinbase</a> (Recommended).
+      </div>
+      <div class="card" style="margin: 15px 0px; width: 40rem; background-color: #2C2F33; color: white;">
+        <img src="/promo" class="card-img-top" alt="placeholder">
+        <div class="card-body">
+          <h5 class="card-title">Spotify Premium Lifetime Upgrade</h5>
+          <p class="card-text">This is a lifetime Spotify premium upgrade for your own personal account. Comes with a
+            one year warranty. Make sure you select the correct country otherwise the upgrade won't work. Don't see your
+            country? That means we are out of stock. Sorry. Need support? Join
+            our <a href="/discord" target="_blank">Discord</a>!
+            <div class="container" style="padding-top: 3%;">
+              <a href="#" id="buyButton" data-toggle="modal" data-target="#optionsModal" class="btn btn-primary">Get for $2.99</a>
+            </div>
+            
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="jumbotron jumbotron-fluid">
+    <div class="container">
+      <h1 class="display-4">FAQ</h1>
+      <p class="lead">
+        <div class="container">
+          <ul style="font-size: 20px;">
+            <hr>
+            <li>Question: Is this legal?
+              <br>
+              Answer: Yes, this is 100% legal to use.</li>
+            <hr>
+            <li>Question: What do I do if my upgrade fails? Do I get a refund?
+              <br>
+              Answer: Yes.
+            </li>
+            <hr>
+            <li>Question: Where can I get support?
+              <br>
+              Answer: You can get support by joining our <a href="/discord" target="_blank">Discord</a> server.
+            </li>
+            <hr>
+            <li>Question: How long does it take to get my product after I ordered?
+              <br>
+              Answer: This depends on the current Blockchain conditions. Usually it will be around 10 to 15 minutes. If
+              you have not received it after waiting, don't hesitate to contact us.
+            </li>
+            <hr>
+          </ul>
+        </div>
+      </p>
+    </div>
+  </div>
+</body>
+<div class="modal fade" id="optionsModal" tabindex="-1" role="dialog" aria-labelledby="optionsModal" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" style="color: #000000">Checkout Options</h5>
+      </div>
+      <div class="modal-body" style="color: #000000">
+        <div class="form-group">
+          <label for="country">Country:</label>
+          <div>
+            <select id="country" class="form-control" name="country">
+              <option value="">Getting countries...</option>
+            </select>
+          </div>
+          <span>Make sure you select the correct country.</span>
+          <hr>
+          <span>Delievery Method:</span>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" onclick="setEmail()" name="method" id="email" value="email">
+            <label class="form-check-label" for="email">
+              Email
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" onclick="setDiscord()" name="method" id="discord" value="discord" checked>
+            <label class="form-check-label" for="discord">
+              Discord (Recommended)
+            </label>
+          </div>
+          <hr>
+          <div class="form-group">
+            <label id="contactMethodLabel" for="contactMethod">Discord Tag:</label>
+            <input class="form-control" id="contactMethod" placeholder="Wumpus#1337">
+            <span id="discordInfo">You must be in our <a href="/discord" target="_blank">Discord</a> server so our bot can message you.</span>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <div style="display: none;" id="spinner" class="spinner-border text-dark" role="status"></div>
+        <button type="button" onclick="buy()" class="btn btn-primary" id="submitButton">Submit</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer style="padding-top: 1%;" class="page-footer font-small cyan darken-3">
+  <img src="/wave.svg" alt="waves_footer" />
+  <div style="background-color: #04090f" class="footer-copyright text-center py-3">
+    <div class="container">
+      <img style="padding-top: 1%; width: 30%;" src="/logo" alt="logo_footer">
+    </div>
+    <p>We are not affiliated with Spotify</p>
+  </div>
+</footer>
+
+</html>
