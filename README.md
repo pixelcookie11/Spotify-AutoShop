@@ -30,3 +30,6 @@ Got everything above covered? Great! Let's get started. Don't want to do this yo
 1. Edit the HTML to how you see fit.
 1. Open the SilverBullet config file and edit the `PLACEHOLDER` ([here](https://github.com/pixelcookie11/AutoShop-API/blob/5a44220fc6afe51e5f881fd21dce2714e712dddf/SpotifyConfig.svb#L440)) IP to your actual API's IP address.
 1. Run `docker-compose up`
+
+# FOR EDUCATIONAL PURPOSES ONLY! Gaining access to accounts you don't control is ILLEGAL! I am not liable for anyone who uses this application.
+
