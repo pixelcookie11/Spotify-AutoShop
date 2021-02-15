@@ -28,5 +28,5 @@ Got everything above covered? Great! Let's get started. Don't want to do this yo
 1. ## _*CHANGE YOUR MYSQL PASSWORD*_
 1. Change the logo and the promo image in `./public/logo.svg` and `./public/promo.svg` respectively.
 1. Edit the HTML to how you see fit.
-1. Open the SilverBullet config file and edit the `PLACEHOLDER` IP to your actual API's IP address.
+1. Open the SilverBullet config file and edit the `PLACEHOLDER` ([here](https://github.com/pixelcookie11/AutoShop-API/blob/5a44220fc6afe51e5f881fd21dce2714e712dddf/SpotifyConfig.svb#L440)) IP to your actual API's IP address.
 1. Run `docker-compose up`
