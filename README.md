@@ -13,7 +13,7 @@ If you already have that setup, then let's get started!
 * Discord Server
 * Discord bot created on the [Discord Developer Portal](https://discord.com/developers/applications) and it's associated bot token.
 * SMTP Server (Can be Gmail)
-* A VPS. Can be Linux or Windows however this setup guide will only cover Linux.
+* A VPS. Can be Linux or Windows.
 * Some sort of automated checker. I will be using [SilverBullet](https://github.com/mohamm4dx/SilverBullet) in this guide. Why? Because it's easy to use and it's free and open source. If you are using your own checker you will need to modify it to POST hits to the API.
 * A domain
 * NGINX or a reverse proxy solution. Make sure to restrict access to `/hit/spotify` and `/api/check/invoice`
