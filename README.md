@@ -1,5 +1,5 @@
 ![GitHub Logo](/public/logo.svg)
-## This is a fully automated shop designed to sell Spotify Premium Family upgrade codes.
+## This is a fully automated shop designed to sell Spotify Premium Family upgrade codes without the need for a 3rd party or any middleman.
 
 # Setup
 
